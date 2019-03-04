@@ -30,13 +30,28 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+`.forEach()` executes a function on each element of an array and can be used to mutate the array. Also it will always return undefined. 
+`.map()` also executes a function on each element of an array. But the difference is that it returns a new array instead of mutating the existing array.
+
 2. What is the difference between a function and a method?
+
+Functions are self-contained programs that can be used independently. Whereas, methods are functions defined with reference to the instance of a class i.e. object. Methods can only be used with reference to an object, and not independently.
 
 3. What is closure?
 
+A closure is a function combined with its environment. For example, if we define a function which has a variable and another function inside it, the inside function will have access to that variable defined in the scope of the outer function. That is called closure.
+
 4. Describe the four rules of the 'this' keyword.
 
-5. Why do we need super() in an extended class?
+Following are the four rules along with brief explanation:
+Window binding:- `this` points to browser window when we call it from the window. 
+Implicit binding:- when `this` is inside of a method function, `this` will point to the object to which that function is a method.
+New binding:- `this` points to the object being created by calling the constructor function with `new` keyword.
+Explicit binding:- we can use `bind()`, `call()` or `apply()` methods to get `this` to point to other objects.
+
+5. Why do we need `super()` in an extended class?
+
+In ES6 class syntax, we have `super()` method which can be used to point the `this` keyword to the parent class and set the prototype of parent class as the prototype of child class. Its role is to do things which were being done by `call()` method and `Object.create()` with respect to prototypical inheritance, before ES6.
 
 ## Project Set up
 
